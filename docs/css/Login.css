@@ -1,0 +1,162 @@
+/* styles.css */
+
+body {
+    font-family: "Tinos", serif;
+    opacity: 1;
+    background-image:  radial-gradient(#fff500 0.8px, transparent 0.8px), radial-gradient(#fff500 0.8px, #2d333f 0.8px);
+    background-size: 32px 32px;
+    background-position: 0 0,16px 16px;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.logo-container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+.ParkingNow_Logo {
+    width: 15%; /* Ajusta el tamaño según sea necesario */
+    max-width: 100%;
+    height: auto; /* Mantiene la proporción del logo */
+    right: 100px;
+}
+.container {
+    background-color: #1c1c1c;
+    padding: 35px;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    width: 100%;
+
+}
+
+.Login{
+    font-family: "Kalam", cursive;
+}
+
+.login-box {
+    display: flex;
+    width: 100%;
+}
+
+.login-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px 0 0 10px;
+    width: 90%;
+    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+.login-form h1 {
+    font-size: 3.5em;
+    margin: 0;
+}
+
+.login-form h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.login-form p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.login-form a {
+    color: #5e3fd6;
+    text-decoration: none;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkbox-group {
+
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input {
+    align-items: center;
+    margin-right: 5px;
+}
+.remember{
+    padding-right: 50%;
+}
+.forgot-password {
+    font-size: 0.8em;
+    color: #5e3fd6;
+    text-decoration: none;
+
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #5e3fd6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.with{
+    text-align: center;
+}
+.social-login {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-login button {
+    width: 48%;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.google-login {
+    background-color: red;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.facebook-login {
+    background-color: #3b5998;
+    color: white;
+}
+
+.loginImagen {
+    width: 100%;
+    height: 600px;
+    background-image: url(docs/img/Arequipa.jpg); /* Replace 'your-image-url.png' with your actual image path */
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 10px 10px 0;
+}
