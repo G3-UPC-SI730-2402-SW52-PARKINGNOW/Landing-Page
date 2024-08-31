@@ -15,17 +15,15 @@ body {
     align-items: center;
     height: 100vh;
 }
-.logo-container {
-    display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    margin-bottom: 20px; /* Espacio inferior */
+.LogoInicio{
+    top: 5%;
+    left: 4%;
+    position: absolute;
+    width: 8%;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+
 }
-.ParkingNow_Logo {
-    width: 15%; /* Ajusta el tamaño según sea necesario */
-    max-width: 100%;
-    height: auto; /* Mantiene la proporción del logo */
-    right: 100px;
-}
+
 .container {
     background-color: #1c1c1c;
     padding: 35px;
@@ -33,6 +31,7 @@ body {
     display: flex;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
     max-width: 1000px;
+    height: 80%;
     width: 100%;
 
 }
@@ -50,7 +49,7 @@ body {
     background-color: white;
     padding: 30px;
     border-radius: 10px 0 0 10px;
-    width: 90%;
+    width: 60%;
     box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.9);
 }
 
@@ -104,13 +103,16 @@ body {
     margin-right: 5px;
 }
 .remember{
-    padding-right: 50%;
+    padding-right: 40%;
 }
 .forgot-password {
     font-size: 0.8em;
     color: #5e3fd6;
     text-decoration: none;
-
+    transition: 0.4s;
+}
+.forgot-password:hover {
+    color: #3d288d;
 }
 
 .login-button {
@@ -122,11 +124,20 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 20px;
+
 }
+.login-button:hover {
+    background-color: #442d9a;
+    transition: 0.3s;
+}
+
+
 .with{
     text-align: center;
 }
+
+
+
 .social-login {
     display: flex;
     justify-content: space-between;
@@ -142,20 +153,35 @@ body {
 }
 
 .google-login {
-    background-color: red;
-    color: #333;
-    border: 1px solid #ddd;
+    background-color: #efefef;
+    border: hidden;
+    transition: 0.3s;
 }
 
+.google-login:hover {
+    background-color: #a8a8a8;
+    border: hidden;
+    transition: 0.3s;
+}
+
+
 .facebook-login {
-    background-color: #3b5998;
+    background-color: #6b98ff;
+    color: white;
+    transition: 0.3s;
+}
+.facebook-login:hover {
+    background-color: #385cab;
     color: white;
 }
 
+.ImageButton{
+width: 15%;
+}
 .loginImagen {
     width: 100%;
-    height: 600px;
-    background-image: url(docs/img/Arequipa.jpg); /* Replace 'your-image-url.png' with your actual image path */
+    height: 100%;
+    background-image: url(docs/img/parkingnow.png); /* Replace 'your-image-url.png' with your actual image path */
     background-size: cover;
     background-position: center;
     border-radius: 0 10px 10px 0;
