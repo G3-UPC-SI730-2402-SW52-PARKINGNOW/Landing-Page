@@ -29,7 +29,14 @@ body {
 .Register {
     font-family: "Kalam", cursive;
 }
+.LogoInicio{
+    top: 5%;
+    left: 4%;
+    position: absolute;
+    width: 8%;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 
+}
 .register-box {
     display: flex;
     width: 100%;
