@@ -331,3 +331,45 @@ width: 100%;
     color: #666666; /* Color del texto de la descripción */
     margin-top: 5px;
 }
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.dropdown-menu a {
+    color: #333333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: "Kalam", cursive;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #d0d0d0;
+    transition: 0.5s;
+}
+
+.dropdown:hover .dropdown-menu {
+    transition: 0.5s;
+    display: block;
+}
+
+.dropdown-toggle:hover {
+    transition: 0.5s;
+    color: #463f09; /* Cambia el color del texto al pasar el ratón */
+}
