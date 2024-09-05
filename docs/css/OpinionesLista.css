@@ -71,13 +71,13 @@ button {
     cursor: pointer;
     border-radius: 8px;
     border: none;
-    background-color: #007bff;
+    background-color: #ffd500;
     color: white;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #b39500;
 }
 
 textarea {
@@ -184,7 +184,7 @@ h2{
 }
 
 .share-button {
-    background-color: #007bff;
+    background-color: #ffcc00;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -195,7 +195,7 @@ h2{
 }
 
 .share-button:hover {
-    background-color: #0056b3;
+    background-color: #fff500;
 }
 
 .share-options {
@@ -207,7 +207,7 @@ h2{
 
 .share-link {
     text-decoration: none;
-    color: #007bff;
+    color: #fff500;
     font-size: 16px;
 }
 

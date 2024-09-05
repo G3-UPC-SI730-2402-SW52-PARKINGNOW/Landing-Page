@@ -99,17 +99,20 @@ body {
 
 .section h2 {
     font-size: 20px;
+    font-family: "Kalam","serif";
     margin-bottom: 10px;
+    padding-left: 20px;
 }
 
 .content-box {
     background-color: #2c2c2c;
     padding: 20px;
     border-radius: 8px;
-    height: 130px;
+    height: 110px;
+    margin: 30px;
 }
 
-.notification {
+.notification{
     position: fixed;
     top: 20px;
     right: 20px;
@@ -154,5 +157,83 @@ body {
 }
 
 .notification-button.active .exclamation-icon {
-    display: inline-block; /* Mostrar el icono cuando hay una notificación */
+    display: inline-block;
+
+}
+.notification-change {
+    top: 100px;
+    background-color: #2d333f;
+}
+
+.notification-change p {
+    margin: 0;
+}
+.notification-cancel {
+    background-color: #dc3545; /* Color rojo para indicar cancelación */
+}
+
+.notification-cancel p, .notification-cancel ul {
+    margin: 10px;
+}
+
+.notification-cancel ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.security-alert {
+    margin: 40px;
+
+    top: 60px;
+    right: 20px;
+    background-color: #ffcc00;
+    color: black;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none; /* Oculto inicialmente */
+    z-index: 1000;
+}
+
+.security-alert.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.security-alert {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background-color: #ffcc00;
+    color: black;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none; /* Oculto inicialmente */
+    z-index: 1000;
+}
+
+.security-alert.show {
+    display: block;
+}
+.content-boxzzz {
+    background-color: #2c2c2c;
+    padding: 20px;
+    margin: 40px;
+    border-radius: 8px;
+    height: auto;
+     flex-direction: column;
+}
+
+.content-image {
+    width: 10%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.content-box p {
+    margin: 10px 0;
 }
