@@ -218,3 +218,65 @@ h2{
 .hidden {
     display: none;
 }
+
+@media (max-width: 400px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .container {
+        width: 85%;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .opinion-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .info-box {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .feedback-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .feedback-image img {
+        width: 20%;
+        position: static;
+        right: 0;
+    }
+
+    .star-widget label {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #reviewsList li {
+        padding: 15px;
+    }
+
+    .share-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    textarea{
+        width: 89%;
+    }
+    .opinion-button{
+        font-size: 12px;
+    }
+}

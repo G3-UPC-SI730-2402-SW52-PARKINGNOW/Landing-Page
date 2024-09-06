@@ -698,3 +698,220 @@ p {
     font-size: 1rem;
     color: #666;
 }
+
+@media (max-width: 1200px) {
+    .container {
+        width: 95%;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .menu a {
+        padding: 10px 0;
+    }
+
+    .locations-grid div {
+        width: 100%;
+        height: auto;
+    }
+
+    .cta-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo img {
+        height: 3rem;
+    }
+
+    .menu a {
+        font-size: 1.2rem;
+        padding: 5px 0;
+    }
+
+    .banner-text {
+        bottom: 40%;
+        left: 5%;
+        font-size: 1.5rem;
+    }
+
+    .promotion-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    body{
+        align-content: center;
+    }
+    .ParkingNow_Logo{
+        display: none;
+    }
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .logo img {
+        height: 2.5rem;
+    }
+
+    .menu a {
+        font-size: 1rem;
+        padding: 5px 0;
+    }
+
+    .banner-text {
+        bottom: 20%;
+        left: 2%;
+        font-size: 1.2rem;
+    }
+
+    .locations-grid div {
+        height: auto;
+    }
+
+    .cta-section {
+        padding: 10px;
+    }
+
+    .chat-button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .login-button {
+        background-color: transparent;
+        color: #ffeb3b;
+        width: 100px;
+        font-size: 10px;
+    }
+
+    .register-button {
+        background-color: #ffeb3b;
+        color: #000000;
+        width: 100px;
+        font-size: 10px;
+        align-content: space-between;
+    }
+    .locations-grid div {
+        width: 80%;
+        max-width: 450px;
+        height: 350px;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        text-align: center;
+    }
+    .location-description {
+        font-size: 0.7rem;
+        color: #666666;
+        margin-top: 5px;
+    }
+    .locations-section h1 {
+        text-align: center;
+        font-family: Kalam,serif;
+        font-size: 1.8rem;
+        margin: 20px;
+        color: #333333;
+        border: 10px;
+    }
+    .cta-title {
+        font-size: 1.0rem;
+        font-weight: bold;
+    }
+    .cta-subtitle {
+        font-size: 0.8rem;
+        margin: 10px 0;
+    }
+    .cta-button {
+        background-color: #ffffff;
+        color: #000000;
+        font-family: Kalam,serif;
+        font-weight: bold;
+    }
+    .cta-button a{
+        font-size: 10px;
+    }
+
+    .image-container img {
+        display: none;
+    }
+
+    .chat-button {
+        font-family: Kalam,serif;
+        position: fixed;
+        bottom: 10px;
+        right: 20px;
+        background-color: #ffeb3b;
+        color: #000000;
+        padding: 1px 10px;
+        border: none;
+        border-radius: 15px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+    }
+    .content h1 {
+        color: white;
+        font-family: "Kalam", serif;
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .menu{
+     padding-left: 20px;
+        font-size: 8px;
+    }
+    .auth-buttons{
+        padding-left: 300px;
+        width: 10%;
+        font-size: 8px;
+        position: sticky;
+      }
+
+    .login-button {
+        background-color: transparent;
+        color: #ffeb3b;
+        width: 60px;
+        padding: 2px;
+        display: none;
+    }
+    .login-button a {
+        font-size: 8px;
+        margin: 0;
+        padding: 0;
+
+    }
+
+
+    .register-button {
+        display: none;
+        background-color: #ffeb3b;
+        color: #000000;
+        font-size: 10px;
+        align-content: space-between;
+        width: 80px;
+        padding: 2px;
+    }
+
+    .register-button a{
+        font-size: 8px;
+        margin: 0;
+        padding: 0;
+    }
+}
