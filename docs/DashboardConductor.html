@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - ParkingNow</title>
+    <link rel="stylesheet" href="css/DashboardConductor.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="sidebar">
+        <div class="logo">
+            <a href="index.html" class="login-link"><img src="img/parkingnow.png" alt="ParkingNow" class="LogoInicio"></a></p>
+            <h2>ParkingNow</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="DashboardReservasLista.html">Reservas</a></li>
+            <li><a href="RegisterReserva.html">Reservar Registro</a></li>
+            <li><a href="DashboardConductor3.html">Soporte</a></li>
+            <li><a href="DashboardConductor4.html" id="tracking-alarm-button">Seguimiento y alarmas de vehículo</a></li>
+            <li><a href="DashboardConductor5.html">Configuración</a></li>
+            <li>
+                <a href="DashboardConductor6.html" class="notification-button">
+                    Notificaciones
+                    <span class="exclamation-icon">!</span>
+                </a>
+            </li>
+
+            <li><a href="index.html">Cerrar sesión</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <div class="profile-picture">
+                <img src="img/Conductor.jpg" alt="Usuario">
+            </div>
+            <h1>Bienvenido...</h1>
+        </div>
+
+        <div class="section">
+            <h2>¿Desea reservar algo?</h2>
+            <div class="content-box">
+                <p>(Historial reciente)</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Lugares concurrentes</h2>
+            <div class="content-box">
+                <p></p>
+            </div>
+        </div>
+
+        <div class="notification">
+            <p>Hay espacio desocupado cerca de su ubicación</p>
+        </div>
+        <div id="notificationChange" class="notification notification-change">
+            <p>Se ha cambiado la hora de una reserva. Revisa los detalles.</p>
+        </div>
+        <div id="notificationCancel" class="notification notification-cancel">
+            <p>Tu reserva ha sido cancelada por falta de disponibilidad. Considera estas opciones alternativas:</p>
+            <ul>
+                <li>Reserva en otra ubicación cercana.</li>
+                <li>Selecciona otra fecha y hora.</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div id="tracking-alarm-section" class="section hidden">
+    <h2>Lugares concurrentes</h2>
+    <div class="content-boxzzz">
+        <img src="img/PlayaChiringuitoChatarra.jpg" alt="Playa Chiringuito Chatarra" class="content-image">
+        <p>Playa Chiringuito Chatarra: Un lugar popular para pasar el día. Amplio espacio y buena seguridad.            <button class="security-check-button" data-parking="Playa Chiringuito Chatarra">Verificar seguridad</button></p>
+
+    </div>
+    <div class="content-boxzzz">
+        <img src="img/EstacionamientoP.jpg" alt="Playa Pisos Picados" class="content-image">
+        <p>Playa Pisos Picados: Ideal para actividades recreativas con instalaciones de calidad.           <button class="security-check-button" data-parking="Playa Pisos Picados">Verificar seguridad</button></p>
+
+    </div>
+    <div class="content-boxzzz">
+        <img src="img/PlayaArboledaAceitosa.jpeg" alt="Playa Arboleda Aceitosa" class="content-image">
+        <p>Playa Arboleda Aceitosa: Conocida por su entorno natural y tranquilidad.            <button class="security-check-button" data-parking="Playa Arboleda Aceitosa">Verificar seguridad</button></p>
+
+    </div>
+    <div class="content-boxzzz">
+        <img src="img/PlayaBalsaBotin.jpg" alt="Playa Balsa Botín" class="content-image">
+        <p>Playa Balsa Botín: Popular entre los locales, con buen acceso y servicios.             <button class="security-check-button" data-parking="Playa Balsa Botín">Verificar seguridad</button></p>
+
+    </div>
+</div>
+
+        <div id="securityAlert" class="security-alert">
+            <p>Alerta de seguridad: Se ha detectado un problema en el estacionamiento seleccionado.</p>
+        </div>
+
+
+
+
+
+</body>
+<script src="js/DashboardConductor.js"></script>
+</html>
