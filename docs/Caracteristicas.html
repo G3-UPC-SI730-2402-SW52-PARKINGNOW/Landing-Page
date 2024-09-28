@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-PE">
+<html lang="en-PE">
 
 <head>
     <meta charset="UTF-8">
@@ -13,19 +13,20 @@
 </head>
 
 <body>
-<button id="chatButton" class="chat-button">P</button>
+<button id="chatButton" class="chat-button" aria-label="Open chat">P</button>
 
-<div id="chatBox" class="chat-box">
+<div id="chatBox" class="chat-box" aria-hidden="true">
     <div class="chat-header">
         <span>Chat</span>
-        <button id="closeChat" class="close-button">&times;</button>
+        <button id="closeChat" class="close-button" aria-label="Close chat">&times;</button>
     </div>
     <div id="chat-container">
-        <div id="messages"></div>
-        <div id="options">
-            <button class="questions1" onclick="userChoice('Disponibilidad de estacionamientos')">Disponibilidad de estacionamientos</button>
-            <button class="questions1" onclick="userChoice('¿Cómo reservar un espacio?')">¿Cómo reservar un espacio?</button>
-            <button class="questions1" onclick="userChoice('Rutas óptimas para el estacionamiento')">Rutas óptimas para el estacionamiento</button>
+        <div id="messages" role="log"></div>
+        <div id="options" role="group" aria-labelledby="options-label">
+            <span id="options-label" class="sr-only">Chat options</span>
+            <button class="questions1" onclick="userChoice('Availability of parking spaces')" aria-label="Check availability of parking spaces">Availability of parking spaces</button>
+            <button class="questions1" onclick="userChoice('How to reserve a space?')" aria-label="Learn how to reserve a space">How to reserve a space?</button>
+            <button class="questions1" onclick="userChoice('Optimal routes for parking')" aria-label="Get optimal routes for parking">Optimal routes for parking</button>
         </div>
     </div>
 </div>
@@ -33,25 +34,25 @@
 <section class="Banner">
     <nav class="navbar">
         <div class="logo">
-            <a href="#"><img src="img/parkingnow.png" alt="PARKINGNOW" class="ParkingNow_Logo"></a>
+            <a href="#" aria-label="Homepage"><img src="img/parkingnow.png" alt="PARKINGNOW" class="ParkingNow_Logo"></a>
         </div>
         <div class="menu">
-            <a href="index.html" class="hover">Inicio</a>
-            <a href="Caracteristicas.html" class="hover">Características</a>
-            <a href="javascript:void(0)" class="hover" id="btnMision">Misión</a>
-            <a href="javascript:void(0)" class="hover" id="btnVision">Visión</a>
+            <a href="index.html" class="hover" aria-label="Go to home page">Home</a>
+            <a href="Caracteristicas.html" class="hover" aria-label="View features">Features</a>
+            <a href="javascript:void(0)" class="hover" id="btnMision" aria-label="View mission">Mission</a>
+            <a href="javascript:void(0)" class="hover" id="btnVision" aria-label="View vision">Vision</a>
             <div class="dropdown">
-                <a href="javascript:void(0)" class="hover dropdown-toggle">Reservar Espacio</a>
-                <div class="dropdown-menu">
-                    <a href="reserve-lima" class="hover">Lima</a>
-                    <a href="reserve-arequipa" class="hover">Arequipa</a>
-                    <a href="reserve-cusco" class="hover">Cusco</a>
+                <a href="javascript:void(0)" class="hover dropdown-toggle" aria-haspopup="true" aria-expanded="false">Reserve Space</a>
+                <div class="dropdown-menu" aria-label="Reserve Space options">
+                    <a href="reserve-lima" class="hover" aria-label="Reserve a space in Lima">Lima</a>
+                    <a href="reserve-arequipa" class="hover" aria-label="Reserve a space in Arequipa">Arequipa</a>
+                    <a href="reserve-cusco" class="hover" aria-label="Reserve a space in Cusco">Cusco</a>
                 </div>
             </div>
         </div>
         <div class="auth-buttons">
-            <button class="login-button"><a href="Login.html">Iniciar sesión</a></button>
-            <button class="register-button"><a href="RegisterOptions.html">Regístrate</a></button>
+            <button class="login-button"><a href="Login.html" aria-label="Log in">Log In</a></button>
+            <button class="register-button"><a href="RegisterOptions.html" aria-label="Register">Register</a></button>
         </div>
     </nav>
 </section>
@@ -59,13 +60,13 @@
 <section class="Introduction">
     <div class="container1">
         <div class="content">
-            <h1>Características de <span class="success">PARKINGNOW</span></h1>
+            <h1>Features of <span class="success">PARKINGNOW</span></h1>
             <p>
-                PARKINGNOW es una startup tecnológica enfocada en ofrecer una solución integral para el estacionamiento en tiempo real. Nuestra plataforma permite reservar y pagar por espacios usando localización geográfica y sensores infrarrojos para gestionar la disponibilidad de forma automatizada y eficiente.
+                PARKINGNOW is a tech startup focused on providing a comprehensive solution for real-time parking. Our platform allows you to reserve and pay for spaces using geographic location and infrared sensors to manage availability in an automated and efficient way.
             </p>
         </div>
         <div class="image-container">
-            <img src="img/Estacionamiento.jpg" alt="Estacionamiento Inteligente">
+            <img src="img/Estacionamiento.jpg" alt="Smart Parking" aria-label="Smart parking area">
         </div>
     </div>
 </section>
@@ -73,13 +74,13 @@
 <section id="Mision" class="Mision">
     <div class="container2">
         <div class="content2">
-            <h1>Misión de <span class="success">PARKINGNOW</span></h1>
+            <h1>Mission of <span class="success">PARKINGNOW</span></h1>
             <p>
-                Actuar como enlace entre conductores y propietarios, mejorando la experiencia de aparcamiento con tecnología eficiente.
+                Act as a link between drivers and owners, improving the parking experience with efficient technology.
             </p>
         </div>
         <div class="image-container2">
-            <img src="img/Mision.jpg" alt="Imag_Mision">
+            <img src="img/Mision.jpg" alt="Mission Image" aria-label="Visual representation of mission">
         </div>
     </div>
 </section>
@@ -87,45 +88,42 @@
 <section id="Vision" class="Vision">
     <div class="container2">
         <div class="content2">
-            <h1>Visión de <span class="success">PARKINGNOW</span></h1>
+            <h1>Vision of <span class="success">PARKINGNOW</span></h1>
             <p>
-                Actuar como enlace entre conductores y propietarios, mejorando la experiencia de aparcamiento con tecnología eficiente.
+                Act as a link between drivers and owners, improving the parking experience with efficient technology.
             </p>
         </div>
         <div class="image-container2">
-            <img src="img/Mision.jpg" alt="Imag_Mision">
+            <img src="img/Mision.jpg" alt="Vision Image" aria-label="Visual representation of vision">
         </div>
     </div>
 </section>
 
 <section class="bannerInfo">
-    <img src="img/Banner_1.jpg" class="object-contain" alt="banner">
+    <img src="img/Banner_1.jpg" class="object-contain" alt="banner" aria-label="Promotional banner">
 </section>
 
 <footer class="footer-section">
     <div class="footer-content">
         <div class="footer-logo" href="index.html">
-            <a href="index.html"><img src="img/parkingnow.png" alt="PARKINGNOW" class="h-10"></a>
-
+            <a href="index.html" aria-label="Homepage"><img src="img/parkingnow.png" alt="PARKINGNOW" class="h-10"></a>
         </div>
         <div class="footer-menu">
-            <a href="about" class="hover">Acerca de</a>
-            <a href="features" class="hover">Características</a>
-            <a href="contact" class="hover">Contacto</a>
+            <a href="About.html" class="hover" aria-label="About us">About</a>
+            <a href="Caracteristicas.html" class="hover" aria-label="View features">Features</a>
+            <a href="About.html" class="hover" aria-label="Contact us">Contact</a>
         </div>
     </div>
     <div class="footer-bottom">
-        &copy; 2024 PARKINGNOW. Todos los derechos reservados.
+        &copy; 2024 PARKINGNOW. All rights reserved.
     </div>
 </footer>
 
 <script>
-
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("btnMision").addEventListener("click", function() {
             document.getElementById("Mision").scrollIntoView({ behavior: "smooth" });
         });
-
 
         document.getElementById("btnVision").addEventListener("click", function() {
             document.getElementById("Vision").scrollIntoView({ behavior: "smooth" });

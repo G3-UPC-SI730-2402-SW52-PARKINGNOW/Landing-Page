@@ -23,89 +23,64 @@
     P
 </button>
 
-<div id="chatBox" class="chat-box">
+<div id="chatBox" class="chat-box" role="dialog" aria-labelledby="chatTitle" aria-describedby="chatDesc">
     <div class="chat-header">
-        <span>Chat</span>
-        <button id="closeChat" class="close-button">&times;</button>
+        <h2 id="chatTitle">Chat</h2>
+        <button id="closeChat" class="close-button" aria-label="Close chat">&times;</button>
     </div>
     <div id="chat-container">
-        <div id="messages"></div>
-        <div id="options">
-            <button class="questions1" onclick="userChoice('Disponibilidad de estacionamientos')">Disponibilidad de estacionamientos</button>
-            <button class="questions1" onclick="userChoice('¿Cómo reservar un espacio?')">¿Cómo reservar un espacio?</button>
-            <button class="questions1" onclick="userChoice('Rutas óptimas para el estacionamiento')">Rutas óptimas para el estacionamiento</button>
+        <div id="messages" aria-live="polite" aria-relevant="all"></div>
+        <div id="options" role="group" aria-label="User questions">
+            <button class="questions1" onclick="userChoice('Availability of parking spaces')" aria-label="Ask about availability of parking spaces">Availability of parking spaces</button>
+            <button class="questions1" onclick="userChoice('How to reserve a space?')" aria-label="Ask how to reserve a space">How to reserve a space?</button>
+            <button class="questions1" onclick="userChoice('Optimal routes for parking')" aria-label="Ask about optimal routes for parking">Optimal routes for parking</button>
         </div>
     </div>
 </div>
-
-<section class="Banner">
-
-    <nav class="navbar">
-
+<section class="Banner" aria-label="Main navigation">
+    <nav class="navbar" role="navigation" aria-label="Main menu">
         <div class="logo">
-            <a href="">
+            <a href="#" aria-label="Go to homepage">
                 <img src="img/parkingnow.png" alt="PARKINGNOW" class="ParkingNow_Logo">
             </a>
-
         </div>
 
-        <div class="menu">
-            <a href="index.html" class="hover">
-                Inicio
-            </a>
-            <a href="Caracteristicas.html" class="hover">
-                Características
-            </a>
-            <div class="dropdown">
-                <a href="javascript:void(0)" class="hover dropdown-toggle">Reservar Espacio</a>
-                <div class="dropdown-menu">
-                    <a href="RegisterReserva.html" class="hover">Lima</a>
-                    <a href="RegisterReserva.html" class="hover">Arequipa</a>
-                    <a href="RegisterReserva.html" class="hover">Cusco</a>
+        <div class="menu" role="menubar">
+            <a href="index.html" class="hover" role="menuitem">Home</a>
+            <a href="Caracteristicas.html" class="hover" role="menuitem">Features</a>
+            <div class="dropdown" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                <a href="javascript:void(0)" class="hover dropdown-toggle">Reserve Space</a>
+                <div class="dropdown-menu" role="menu" aria-hidden="true">
+                    <a href="RegisterReserva.html" class="hover" role="menuitem">Lima</a>
+                    <a href="RegisterReserva.html" class="hover" role="menuitem">Arequipa</a>
+                    <a href="RegisterReserva.html" class="hover" role="menuitem">Cusco</a>
                 </div>
             </div>
-            <a href="#contact" class="hover">Contáctenos</a>
+            <a href="#contact" class="hover" role="menuitem">Contact Us</a>
         </div>
-
 
         <div class="auth-buttons">
             <button class="login-button">
-                <a href="Login.html">Iniciar sesion</a>
+                <a href="Login.html" aria-label="Log In">Log In</a>
             </button>
             <button class="register-button">
-                <a href="RegisterOptions.html">
-                    Regístrar Cuenta
-                </a>
+                <a href="RegisterOptions.html" aria-label="Register Account">Register Account</a>
             </button>
         </div>
-
-
-
-
     </nav>
 
-    <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
         <div class="menu-content">
             <div class="grid">
-                <a href="" class="hover">
-                    Inicio
-                </a>
-                <a href="" class="hover">
-                    Características
-                </a>
-                <a href="" class="hover">
-                    Reservar Espacio
-                </a>
+                <a href="index.html" class="hover" role="menuitem">Home</a>
+                <a href="Caracteristicas.html" class="hover" role="menuitem">Features</a>
+                <a href="javascript:void(0)" class="hover" role="menuitem">Reserve Space</a>
                 <div class="auth-buttons-mobile">
                     <button class="login-button-mobile">
-                        <a href="">
-                            Iniciar Sesión
-                        </a>
+                        <a href="Login.html" aria-label="Log In">Log In</a>
                     </button>
                     <button class="register-button-mobile">
-                        <a href="">
-                            Regístrate
-                        </a>
+                        <a href="RegisterOptions.html" aria-label="Sign Up">Sign Up</a>
                     </button>
                 </div>
             </div>
@@ -113,141 +88,137 @@
     </div>
 </section>
 
+
 <section class="locations-section">
-    <h1 class="font-extrabold">
-        ¿Quienes somos?
+    <h1 class="font-extrabold" aria-label="Who are we?">
+        Who are we?
     </h1>
 
-    <div class="locations-grid">
+    <div class="locations-grid" aria-label="Team members">
         <div>
             <img src="img/Diego.jpg" alt="Diego Soto" class="Diego">
-            <p class="location-text">
+            <p class="location-text" aria-label="Diego Ulises Soto Quispe">
                 Diego Ulises Soto Quispe
             </p>
-            <p class="location-description text-center text-lg mt-1">
-                Soy estudiante de 5to ciclo en la carrera de Ingeniería de Software. Soy responsable en las labores que se asignan y puntual con los trabajos por entregar, fuera del mundo de programación, me gusta jugar basquet, salir a pasear, jugar videojuegos y manejar en bicicleta.
+            <p class="location-description text-center text-lg mt-1" aria-label="About Diego Soto">
+                I am a 5th-cycle student in the Software Engineering program. I am responsible in the tasks assigned to me and punctual with deadlines. Outside of programming, I enjoy playing basketball, going for walks, playing video games, and riding my bike.
             </p>
         </div>
         <div>
             <img src="img/Diego_C.jpg" alt="Diego Cacho" class="location-image">
-            <p class="location-text">
+            <p class="location-text" aria-label="Diego Alonso Cacho Seminario">
                 Diego Alonso Cacho Seminario
             </p>
-            <p class="location-description  ">
-                Mi nombre es Diego Cacho y tengo 19 años, actualmente me encuentro 5to ciclo de mi carrera como Ingeniero de Software en la UPC. Me considero una persona tranquila y diligente, intento realizar mis tareas y trabajos lo antes posible para evitar contratiempos en un futuro, especialmente si son actividades que consumen mucho tiempo. Como miembro de equipo buscaré ayudar a mis compañeros cuando lo necesiten, realizando además mis entregas lo más temprano posible.
+            <p class="location-description" aria-label="About Diego Cacho">
+                My name is Diego Cacho, and I am 19 years old. I am currently in the 5th cycle of my Software Engineering career at UPC. I consider myself a calm and diligent person; I try to complete my tasks and assignments as soon as possible to avoid future setbacks, especially for time-consuming activities. As a team member, I will seek to help my colleagues whenever they need it, and I will also make my submissions as early as possible.
             </p>
         </div>
         <div>
             <img src="img/Omar.jpeg" alt="Omar Rivera" class="location-image">
-            <p class="location-text">
+            <p class="location-text" aria-label="Omar Harold Rivera Ticllacuri">
                 Omar Harold Rivera Ticllacuri
             </p>
-            <p class="location-description text-center text-lg mt-1">
-                Soy estudiante de Ingeniería de Software, tengo 19 años y actualmente me encuentro en el quinto ciclo de mi carrera. Soy una persona con la cual tengo la disciplina y responsable para desarrollar proyectos de software y software de entretenimiento. Cuento con experiencia sobre el desarrollo de software de entretenimiento. Por ende, apoyaré al grupo en todo lo posible para poder desarrollar adecuadamente el trabajo y la propuesta que se nos asignó.
+            <p class="location-description text-center text-lg mt-1" aria-label="About Omar Rivera">
+                I am a Software Engineering student, 19 years old, currently in the fifth cycle of my career. I am a disciplined and responsible person when it comes to developing software and entertainment projects. I have experience in entertainment software development. Therefore, I will support the group in every possible way to adequately develop the work and proposal assigned to us.
             </p>
         </div>
     </div>
 </section>
 <section class="locations-section">
-    <div class="locations-grid">
+    <div class="locations-grid" aria-label="Additional Team members">
         <div>
-            <img src="img/Samuel.jpeg" alt="Lima" class="location-image">
-            <p class="location-text">
+            <img src="img/Samuel.jpeg" alt="Samuel Elias Molina Asencios" class="location-image">
+            <p class="location-text" aria-label="Samuel Elias Molina Asencios">
                 Samuel Elias Molina Asencios
             </p>
-            <p class="location-description text-center text-lg mt-1">
-                Soy estudiante de 7mo ciclo en la carrera de Ingeniería de Software. Actualmente formo parte de un equipo de desarrollo ejecutando el rol de Analista desarrollador de software, me gusta mucho el arte y el deporte, en mis tiempos libres toco Piano o voy a nadar no hay nada mejor que la natación.
+            <p class="location-description text-center text-lg mt-1" aria-label="About Samuel Molina">
+                I am a 7th-cycle student in the Software Engineering program. I am currently part of a development team, taking on the role of Software Analyst Developer. I really enjoy art and sports. In my free time, I play the piano or go swimming; there's nothing better than swimming.
             </p>
         </div>
         <div>
-            <img src="img/Rodrigo.png" alt="Arequipa" class="location-image">
-            <p class="location-text">
+            <img src="img/Rodrigo.png" alt="Rodrigo Liberato Saldaña" class="location-image">
+            <p class="location-text" aria-label="Rodrigo Liberato Saldaña">
                 Rodrigo Liberato Saldaña
             </p>
-            <p class="location-description  ">
-                Soy estudiante de 6to ciclo de la carrera de Ingenieria de software, soy una persona que valora el esfuerzo e intenta apoyar en todo lo posible. La responsabilidad y honestidad son unas de mis cualidades y que seran de ayuda para que el trabajo salga lo mejor posible
+            <p class="location-description" aria-label="About Rodrigo Saldaña">
+                I am a 6th-cycle student in the Software Engineering program. I am a person who values effort and tries to support in every possible way. Responsibility and honesty are some of my qualities, and they will be helpful to ensure that the work is done as well as possible.
             </p>
         </div>
     </div>
 </section>
 
-<section class="promotions-section">
-    <h2>Promociones Destacadas</h2>
-    <div class="promotion-grid">
-        <div class="promotion" id="promotion-lima">
-            <img src="img/Lima_Descuento.jpg" alt="Promoción en Lima" class="promotion-img">
-            <h3>Promoción en Lima</h3>
-            <p>¡Descuento del 20% en tu primera reserva!</p>
+<section class="promotions-section" aria-labelledby="promotionsTitle">
+    <h2 id="promotionsTitle">Featured Promotions</h2>
+    <div class="promotion-grid" role="grid">
+        <div class="promotion" id="promotion-lima" role="gridcell">
+            <img src="img/Lima_Descuento.jpg" alt="Promotion in Lima" class="promotion-img" aria-describedby="promoLimaDesc">
+            <h3>Promotion in Lima</h3>
+            <p id="promoLimaDesc">20% discount on your first reservation!</p>
         </div>
-        <div class="promotion" id="promotion-arequipa">
-            <img src="img/Arequipa_Descuento.jpg" alt="Promoción en Arequipa" class="promotion-img">
-            <h3>Promoción en Arequipa</h3>
-            <p>¡Reserva ahora y obtén 15% de descuento!</p>
+        <div class="promotion" id="promotion-arequipa" role="gridcell">
+            <img src="img/Arequipa_Descuento.jpg" alt="Promotion in Arequipa" class="promotion-img" aria-describedby="promoArequipaDesc">
+            <h3>Promotion in Arequipa</h3>
+            <p id="promoArequipaDesc">Book now and get a 15% discount!</p>
         </div>
-        <div class="promotion" id="promotion-cusco">
-            <img src="img/Cuzco_Descuento.jpg" alt="Promoción en Cusco" class="promotion-img">
-            <h3>Promoción en Cusco</h3>
-            <p>¡10% de descuento en todos los espacios!</p>
+        <div class="promotion" id="promotion-cusco" role="gridcell">
+            <img src="img/Cuzco_Descuento.jpg" alt="Promotion in Cusco" class="promotion-img" aria-describedby="promoCuscoDesc">
+            <h3>Promotion in Cusco</h3>
+            <p id="promoCuscoDesc">10% discount on all spaces!</p>
         </div>
     </div>
 </section>
-
-
-
-
-
-<section class="cta-section">
-    <img src="img/Estacionamientos.jpg" alt="cta-banner" class="cta-banner">
+<section class="cta-section" aria-label="Call to Action">
+    <img src="img/Estacionamientos.jpg" alt="Parking call to action banner" class="cta-banner" />
     <div class="cta-content">
-        <p class="cta-title">
-            ¿BUSCAS UN ESTACIONAMIENTO?<br>TE AYUDAMOS A ENCONTRARLO
+        <p class="cta-title" role="heading" aria-level="3">
+            ARE YOU LOOKING FOR PARKING?<br>WE HELP YOU FIND IT
         </p>
         <p class="cta-subtitle">
-            Con PARKINGNOW puedes encontrar y reservar tu espacio en segundos.
+            With PARKINGNOW, you can find and reserve your space in seconds.
         </p>
-        <button class="cta-button">
-            <a href="Login.html">
-                Comienza Ahora
+        <button class="cta-button" aria-label="Get Started Now">
+            <a href="Login.html" aria-label="Get Started Now">
+                Get Started Now
             </a>
         </button>
     </div>
 </section>
 
-<section class="contact-section" id="contact">
-    <h2>Contáctenos</h2>
-    <form class="contact-form">
+<section class="contact-section" id="contact" aria-labelledby="contactTitle">
+    <h2 id="contactTitle">Contact Us</h2>
+    <form class="contact-form" aria-label="Contact form" method="post" >
         <div class="form-group">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" placeholder="Tu nombre">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required aria-required="true">
         </div>
         <div class="form-group">
-            <label for="email">Correo Electrónico</label>
-            <input type="email" id="email" name="email" placeholder="Tu correo">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required aria-required="true">
         </div>
         <div class="form-group">
-            <label for="message">Mensaje</label>
-            <textarea id="message" name="message" placeholder="Escribe tu mensaje"></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message" required aria-required="true"></textarea>
         </div>
-        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+        <button type="submit" class="submit-btn" aria-label="Send Message">Send Message</button>
     </form>
 </section>
-
-
-<footer class="footer-section">
+<footer class="footer-section" aria-label="Footer">
     <div class="footer-content">
         <div class="footer-logo">
-            <img src="img/parkingnow.png" alt="PARKINGNOW" class="h-10">
+            <img src="img/parkingnow.png" alt="PARKINGNOW logo" class="h-10">
         </div>
         <div class="footer-menu">
-            <a href="About.html" class="hover">Acerca de</a>
-            <a href="Caracteristicas.html"  class="hover">Características</a>
-            <a href="About.html" class="hover">Contacto</a>
+            <a href="About.html" class="hover">About</a>
+            <a href="Caracteristicas.html" class="hover">Features</a>
+            <a href="About.html" class="hover">Contact</a>
         </div>
     </div>
-    <div class="footer-bottom">
-        &copy; 2024 PARKINGNOW. Todos los derechos reservados.
+    <div class="footer-bottom" aria-label="Copyright Information">
+        &copy; 2024 PARKINGNOW. All rights reserved.
     </div>
 </footer>
+
+
 
 </body>
 

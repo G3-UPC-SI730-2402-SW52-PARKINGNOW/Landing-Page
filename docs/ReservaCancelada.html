@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmación de Opinión</title>
+    <title>Reservation Confirmation</title>
     <link rel="stylesheet" href="css/RegisterOpinion.css">
 </head>
 <body>
 
-<div class="container">
+<div class="container" role="main" aria-labelledby="confirmation-title">
 
-    <div class="feedback-confirmation-box">
-        <h1 class="feedback-title">Su reserva ha sido cancelada</h1>
+    <div class="feedback-confirmation-box" aria-live="polite">
+        <h1 class="feedback-title" id="confirmation-title">Your Reservation Has Been Canceled</h1>
+        <p class="feedback-message">We're sorry to see you go. If you'd like to make another reservation, you can do so using the button below.</p>
         <div class="button-group">
-            <a href="RegisterReserva.html" class="reserve-again-button">Volver a Reservar</a>
-            <a href="index.html" class="home-button">Volver al inicio</a>
+            <a href="RegisterReserva.html" class="reserve-again-button" role="button">Reserve Again</a>
+            <a href="index.html" class="home-button" role="button">Return to Home</a>
         </div>
     </div>
 </div>
 
-<p class="footer-text">© 2024 PARKINGNOW. Todos los derechos reservados.</p>
+<p class="footer-text">© 2024 PARKINGNOW. All rights reserved.</p>
+
 </body>
 </html>
